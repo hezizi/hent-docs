@@ -1,6 +1,5 @@
-.DS_Store
-.idea
-
 node_modules
-cache
-dist
+docs/**/dist
+docs/**/cache
+
+.DS_Store

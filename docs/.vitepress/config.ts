@@ -1,31 +1,28 @@
 import { defineConfig } from 'vitepress'
-import demoBlockPlugin from '@yuci/vitepress-markdown-demo-block'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/hent-docs/',
-  srcExclude: ['demos'],
-  title: 'markdown-demo-block',
-  description: 'markdown-demo-block',
+  title: "My Awesome Project",
+  description: "A VitePress Site",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/components' }
+      { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
       {
         text: 'Examples',
-        items: [{ text: 'Markdown Examples', link: '/components' }]
+        items: [
+          { text: 'Markdown Examples', link: '/markdown-examples' },
+          { text: 'Runtime API Examples', link: '/api-examples' }
+        ]
       }
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  },
-  markdown: {
-    config: (md) => md.use(demoBlockPlugin)
   }
 })
