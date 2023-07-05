@@ -22,7 +22,8 @@ jobs:
       #   with:
       #     node-version: 19.8.1
       #     cache: pnpm
-      - run: npm ci
+      - name: CI
+        run: npm ci
       - name: Build
         run: npm run docs:build
       - uses: actions/configure-pages@v2
